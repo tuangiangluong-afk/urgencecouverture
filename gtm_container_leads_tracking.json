@@ -246,16 +246,21 @@
         "triggerId": "101",
         "name": "Custom - form_start",
         "type": "CUSTOM_EVENT",
-        "customEventStartFilter": [
+        "customEventFilter": [
           {
-            "type": "ALWAYS"
-          }
-        ],
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "eventName",
-            "value": "form_start"
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "form_start"
+              }
+            ]
           }
         ]
       },
@@ -265,16 +270,21 @@
         "triggerId": "102",
         "name": "Custom - generate_lead",
         "type": "CUSTOM_EVENT",
-        "customEventStartFilter": [
+        "customEventFilter": [
           {
-            "type": "ALWAYS"
-          }
-        ],
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "eventName",
-            "value": "generate_lead"
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "generate_lead"
+              }
+            ]
           }
         ]
       }
