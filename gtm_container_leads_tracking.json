@@ -295,7 +295,7 @@
         "containerId": "789012",
         "variableId": "1",
         "name": "dlv - lead_category",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -314,7 +314,7 @@
         "containerId": "789012",
         "variableId": "2",
         "name": "dlv - lead_city",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -333,7 +333,7 @@
         "containerId": "789012",
         "variableId": "3",
         "name": "dlv - value",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -352,7 +352,7 @@
         "containerId": "789012",
         "variableId": "4",
         "name": "dlv - currency",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -371,7 +371,7 @@
         "containerId": "789012",
         "variableId": "5",
         "name": "dlv - traffic_source",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -390,7 +390,7 @@
         "containerId": "789012",
         "variableId": "6",
         "name": "dlv - traffic_medium",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -409,7 +409,7 @@
         "containerId": "789012",
         "variableId": "7",
         "name": "dlv - traffic_campaign",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -428,7 +428,7 @@
         "containerId": "789012",
         "variableId": "8",
         "name": "dlv - traffic_term",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -447,7 +447,7 @@
         "containerId": "789012",
         "variableId": "9",
         "name": "dlv - traffic_content",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
@@ -466,7 +466,7 @@
         "containerId": "789012",
         "variableId": "10",
         "name": "dlv - landing_page",
-        "type": "dlv",
+        "type": "v",
         "parameter": [
           {
             "type": "TEMPLATE",
