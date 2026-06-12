@@ -29,7 +29,7 @@
           },
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
+            "key": "measurementIdOverride",
             "value": "{{GA4 Measurement ID}}"
           },
           {
@@ -73,7 +73,7 @@
           },
           {
             "type": "TEMPLATE",
-            "key": "measurementId",
+            "key": "measurementIdOverride",
             "value": "{{GA4 Measurement ID}}"
           },
           {
