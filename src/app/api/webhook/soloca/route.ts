@@ -52,7 +52,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, post: inserted });
   } catch (error: any) {
-    console.error('Expert Borne Recharge Webhook error:', error);
+    console.error('Urgence Couverture Webhook error:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

@@ -67,7 +67,7 @@ export default function AdminLoginPage() {
                                 type="email"
                                 required
                                 className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition text-slate-900 placeholder:text-slate-400"
-                                placeholder="admin@expertbornerecharge.com"
+                                placeholder="admin@urgencecouverture.com"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />

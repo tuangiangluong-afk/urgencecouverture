@@ -4,7 +4,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
     const INDEXNOW_KEY = "d857c21382b142dcb53f9459750f5cc4";
-    const HOST = "expertbornerecharge.com";
+    const HOST = "urgencecouverture.com";
     const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
     try {

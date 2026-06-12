@@ -88,7 +88,7 @@ export async function GET(request: Request) {
             }
 
             // 4. Update live_url in Soloca for ranking tracking
-            const liveUrl = `https://expertbornerecharge.com/blog/${slug}`;
+            const liveUrl = `https://urgencecouverture.com/blog/${slug}`;
             await solocaDb
                 .from('authority_articles')
                 .update({ live_url: liveUrl })

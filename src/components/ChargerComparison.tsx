@@ -77,7 +77,7 @@ export default function ChargerComparison({ themeColor = "blue", onCompareClick 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
                     <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
-                            Comparez les meilleures bornes
+                            Comparez les devis de toiture
                         </h2>
                         <p className="text-slate-500">
                             Nous travaillons avec les fabricants leaders pour garantir qualité et durabilité.
