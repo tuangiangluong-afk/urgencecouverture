@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Step 1: Project Type Selection - EV Install Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d141c] dark:text-white transition-colors duration-200">
+<!-- Main Layout Container -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1a2632] px-6 lg:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-2xl">ev_station</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[#0d141c] dark:text-white">EV Install Pro</h1>
+</div>
+<div class="hidden sm:flex items-center gap-2 px-4 py-2 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 rounded-full text-sm font-semibold border border-green-100 dark:border-green-800/50">
+<span class="material-symbols-outlined text-lg">lock</span>
+<span>Secure Connection</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex flex-col lg:flex-row grow max-w-7xl mx-auto w-full">
+<!-- Left Column: Form & Interaction -->
+<div class="flex-1 flex flex-col p-6 lg:p-12 xl:p-16 bg-white dark:bg-[#1a2632]">
+<!-- Progress Bar Section -->
+<div class="mb-10 w-full max-w-2xl mx-auto lg:mx-0">
+<div class="flex justify-between items-end mb-2">
+<span class="text-sm font-semibold text-primary uppercase tracking-wide">Step 1 of 3</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">33% Completed</span>
+</div>
+<div class="h-2 w-full bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 33%"></div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="mb-8 max-w-2xl mx-auto lg:mx-0">
+<h2 class="text-3xl lg:text-4xl font-bold leading-tight mb-3 text-[#0d141c] dark:text-white">Where do you want to install the charging station?</h2>
+<p class="text-lg text-slate-600 dark:text-slate-300">Select the option that best describes your project to get an accurate estimate.</p>
+</div>
+<!-- Selection Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto lg:mx-0">
+<!-- Card 1: Single House -->
+<button class="group flex flex-col items-start text-left gap-4 p-6 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-[#202d3a] hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary/20">
+<div class="size-14 rounded-full bg-blue-50 dark:bg-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200 text-primary dark:text-primary-foreground">
+<span class="material-symbols-outlined text-3xl">home</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-[#0d141c] dark:text-white mb-1">Maison Individuelle</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Single family home or detached house.</p>
+</div>
+<div class="mt-auto pt-4 w-full flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</button>
+<!-- Card 2: Condo -->
+<button class="group flex flex-col items-start text-left gap-4 p-6 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-[#202d3a] hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary/20">
+<div class="size-14 rounded-full bg-blue-50 dark:bg-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200 text-primary dark:text-primary-foreground">
+<span class="material-symbols-outlined text-3xl">apartment</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-[#0d141c] dark:text-white mb-1">Copropriété</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Apartment building or shared residency.</p>
+</div>
+<div class="mt-auto pt-4 w-full flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</button>
+<!-- Card 3: Business -->
+<button class="group flex flex-col items-start text-left gap-4 p-6 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-[#202d3a] hover:border-primary dark:hover:border-primary hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary/20">
+<div class="size-14 rounded-full bg-blue-50 dark:bg-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200 text-primary dark:text-primary-foreground">
+<span class="material-symbols-outlined text-3xl">domain</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-[#0d141c] dark:text-white mb-1">Entreprise</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Office building, factory or parking lot.</p>
+</div>
+<div class="mt-auto pt-4 w-full flex justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</button>
+</div>
+<!-- Mobile only reassurance (visible only on small screens) -->
+<div class="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800 lg:hidden grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+<span>Free Quote</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-xl">check_circle</span>
+<span>Expert IRVE</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Reassurance Sidebar -->
+<aside class="hidden lg:flex flex-col w-96 border-l border-gray-200 dark:border-gray-800 bg-slate-50 dark:bg-[#151f28] p-10 shrink-0">
+<div class="sticky top-28">
+<h3 class="text-xl font-bold text-[#0d141c] dark:text-white mb-6">Why choose EV Install Pro?</h3>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="mt-1 flex items-center justify-center size-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 shrink-0">
+<span class="material-symbols-outlined text-lg font-bold">price_check</span>
+</div>
+<div>
+<h4 class="font-bold text-[#0d141c] dark:text-white">Devis 100% Gratuit</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Get a detailed estimate with zero commitment.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 flex items-center justify-center size-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 shrink-0">
+<span class="material-symbols-outlined text-lg font-bold">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-[#0d141c] dark:text-white">Expert IRVE Certified</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Our installers are fully qualified for EV infrastructure.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 flex items-center justify-center size-8 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 shrink-0">
+<span class="material-symbols-outlined text-lg font-bold">savings</span>
+</div>
+<div>
+<h4 class="font-bold text-[#0d141c] dark:text-white">Grants Included</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-1">We automatically calculate and deduct state aids.</p>
+</div>
+</li>
+</ul>
+<div class="mt-10 p-6 bg-white dark:bg-[#1a2632] rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-1 text-yellow-400 mb-2">
+<span class="material-symbols-outlined text-xl fill-current">star</span>
+<span class="material-symbols-outlined text-xl fill-current">star</span>
+<span class="material-symbols-outlined text-xl fill-current">star</span>
+<span class="material-symbols-outlined text-xl fill-current">star</span>
+<span class="material-symbols-outlined text-xl fill-current">star</span>
+</div>
+<p class="text-sm text-[#0d141c] dark:text-white font-medium italic">"Excellent service! The installation was quick and the team handled all the paperwork for the grant."</p>
+<div class="flex items-center gap-3 mt-4">
+<div class="w-8 h-8 bg-center bg-no-repeat bg-cover rounded-full bg-slate-200" data-alt="Portrait of a smiling customer named Thomas" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCZu-Tz8wyRUwPN-qAapNrP_H6LLBUQsf3r3QB-eIhfWBj27TydJ583zcxBlaz2lj816CbHmZhnTkU6WVZT0ijblaihd1bq9fJ543dBQ9cRRjyiFbQ9JUxeEHsiUFW7EQHl2iiSqRRPzmAUWJdW61yuaXlvTdDfhh-Pl-MHDlIEWYhYDcn8dpwZU-TxLxzU64PTpQRozhd837ZLeg3whtJCT7R9FXrElQYX6Vpk_azHFtEb90NWC8wRpSnTzKR8clnPvMG6NarOoc");'></div>
+<span class="text-xs font-bold text-slate-500 dark:text-slate-400">Thomas L. - Paris</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

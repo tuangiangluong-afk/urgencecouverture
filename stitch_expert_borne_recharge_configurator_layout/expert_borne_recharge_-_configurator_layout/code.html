@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Expert Borne Recharge - EV Charging Solutions</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "primary-dark": "#0b6bcb",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'glow': '0 0 15px rgba(13, 127, 242, 0.3)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display selection:bg-primary/20">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">Expert Borne</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">How it works</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Pros</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center">
+<button class="bg-primary hover:bg-primary-dark text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 flex items-center gap-2">
+<span>Get a Quote</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-10 pb-16 lg:pt-20 lg:pb-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<!-- Left Column: Content & Form Funnel -->
+<div class="flex flex-col gap-6">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-primary text-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span>#1 Certified Installer</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                                The expert solution for your <span class="text-primary">electric vehicle</span> charging.
+                            </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
+                                Get a personalized quote in less than 2 minutes. We work with certified IRVE installers to power your journey.
+                            </p>
+</div>
+<!-- Configurator Widget -->
+<div class="mt-4 bg-white dark:bg-slate-800 rounded-2xl shadow-soft dark:shadow-none dark:border dark:border-slate-700 p-6 sm:p-8 transition-all hover:shadow-xl border border-slate-100">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+<span class="flex items-center justify-center size-6 rounded-full bg-primary text-white text-xs font-bold">1</span>
+                                    Where do you want to install?
+                                </h3>
+<span class="text-xs font-medium text-slate-400">Step 1 of 3</span>
+</div>
+<!-- Options Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+<!-- Option 1: House -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="property_type" type="radio" value="house"/>
+<div class="h-full flex flex-col items-center justify-center gap-3 p-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 peer-checked:border-primary peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900/20 transition-all duration-200">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary peer-checked:text-primary transition-colors">home</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-primary peer-checked:text-primary text-center">Individual<br/>House</span>
+</div>
+<div class="absolute top-2 right-2 opacity-0 peer-checked:opacity-100 text-primary transition-opacity">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+</label>
+<!-- Option 2: Apartment -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="property_type" type="radio" value="apartment"/>
+<div class="h-full flex flex-col items-center justify-center gap-3 p-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 peer-checked:border-primary peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900/20 transition-all duration-200">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary peer-checked:text-primary transition-colors">apartment</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-primary peer-checked:text-primary text-center">Apartment<br/>Complex</span>
+</div>
+<div class="absolute top-2 right-2 opacity-0 peer-checked:opacity-100 text-primary transition-opacity">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+</label>
+<!-- Option 3: Business -->
+<label class="cursor-pointer group relative">
+<input class="peer sr-only" name="property_type" type="radio" value="business"/>
+<div class="h-full flex flex-col items-center justify-center gap-3 p-4 rounded-xl border-2 border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 hover:border-primary/50 hover:bg-blue-50/50 dark:hover:bg-blue-900/10 peer-checked:border-primary peer-checked:bg-blue-50 dark:peer-checked:bg-blue-900/20 transition-all duration-200">
+<span class="material-symbols-outlined text-3xl text-slate-400 group-hover:text-primary peer-checked:text-primary transition-colors">domain</span>
+<span class="text-sm font-semibold text-slate-700 dark:text-slate-300 group-hover:text-primary peer-checked:text-primary text-center">Office<br/>Business</span>
+</div>
+<div class="absolute top-2 right-2 opacity-0 peer-checked:opacity-100 text-primary transition-opacity">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2 group">
+<span>Continue</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-slate-400 mt-4 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+                                Your information is secure and encrypted.
+                            </p>
+</div>
+</div>
+<!-- Right Column: Visuals -->
+<div class="relative hidden lg:block h-full min-h-[500px]">
+<!-- Main Image -->
+<div class="absolute inset-0 bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-center bg-cover" data-alt="Modern electric vehicle charging in a clean, minimalist garage setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAuQMcYjS95EUn-jbEAEblJBdv3Mtxee-38oVXTBy6kGUNGXdmIaFl4fpFinxBKspz5wFFUlxk6xX1tsWNZ51EEWfncnXxoF1mgkYW7oWEQR1l6k97lcsahY-tKoC-mg0PpS4ghi5xHKkY2huqKm0k4e0f2rsEz5aHFCr0GRYb8XgH1bET4y5lEO622ZtVEGw5Rrj1AjtMPU3SoLfjJhjd5Qc9ug9xHYVtskcEuC2H-eeR4W45dI47_Zn2-PHPkEJ6J7Y32axXNU4");'>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+<!-- Floating Stat Card -->
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 max-w-xs animate-in fade-in slide-in-from-bottom-4 duration-1000">
+<div class="size-12 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">savings</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400">Government Grants</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">Up to €300 Off</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Badges Section -->
+<section class="bg-white dark:bg-slate-800 border-y border-slate-200 dark:border-slate-700 py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<p class="text-center text-sm font-medium text-slate-500 dark:text-slate-400 mb-6 uppercase tracking-wider">Certified and approved by leading bodies</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Text placeholders for logos to ensure reliability -->
+<div class="flex items-center gap-2 group cursor-default">
+<span class="material-symbols-outlined text-4xl text-blue-600">verified_user</span>
+<span class="text-xl font-bold text-slate-700 dark:text-slate-200 group-hover:text-blue-600 transition-colors">QUALIFELEC</span>
+</div>
+<div class="flex items-center gap-2 group cursor-default">
+<span class="material-symbols-outlined text-4xl text-green-600">electric_bolt</span>
+<span class="text-xl font-bold text-slate-700 dark:text-slate-200 group-hover:text-green-600 transition-colors">IRVE</span>
+</div>
+<div class="flex items-center gap-2 group cursor-default">
+<span class="material-symbols-outlined text-4xl text-purple-600">eco</span>
+<span class="text-xl font-bold text-slate-700 dark:text-slate-200 group-hover:text-purple-600 transition-colors">ADVENIR</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Grid -->
+<section class="py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Why choose Expert Borne?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg">We simplify the transition to electric mobility with a transparent and secure process.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">engineering</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Certified Installers</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Every technician in our network is IRVE certified, ensuring your installation meets the highest safety and quality standards.
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">speed</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Fast Turnaround</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            From quote to installation in record time. We handle the paperwork so you can start charging sooner.
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-700 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">price_check</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Transparent Pricing</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                            No hidden fees. Get a clear, detailed quote upfront that includes hardware, installation, and warranty.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Simple -->
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-slate-900 dark:bg-slate-700 rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">bolt</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">Expert Borne</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Expert Borne Recharge. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="#"><span class="sr-only">Facebook</span><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300" href="#"><span class="sr-only">Twitter</span><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</footer>
+<!-- Floating CTA -->
+<div class="fixed bottom-6 right-6 z-40">
+<button class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-full shadow-lg shadow-primary/30 flex items-center gap-2 transform hover:scale-105 transition-all">
+<span class="material-symbols-outlined">edit_document</span>
+<span>Get a Free Quote</span>
+</button>
+</div>
+</body></html>

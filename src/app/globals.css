@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Roofing Brand Colors - Charcoal & Amber Orange */
+  --color-background: 210 20% 98%;
+  --color-foreground: 222 15% 15%;
+
+  /* Amber Orange - Primary */
+  --color-primary: 24 95% 53%;
+  --color-primary-foreground: 0 0% 100%;
+
+  /* Deep Charcoal - Secondary */
+  --color-secondary: 222 15% 12%;
+  --color-secondary-foreground: 210 40% 98%;
+
+  /* Safety Gold/Amber - Accent */
+  --color-accent: 38 92% 50%;
+  --color-accent-foreground: 222 47% 11%;
+
+  /* Alert Yellow */
+  --color-warning: 24 95% 50%;
+  --color-warning-foreground: 222 47% 11%;
+
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 222 15% 15%;
+
+  --radius-lg: 0.75rem;
+
+  --font-sans: var(--font-inter), sans-serif;
+}
+
+/* Custom Utilities using @utility */
+@utility glass-card {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-xl;
+}
+
+@utility glass-dark {
+  @apply bg-neutral-900/60 backdrop-blur-md border border-white/10 shadow-2xl;
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-500;
+}
+
+@utility text-gradient-green {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-400;
+}
+
+@utility bg-irve-gradient {
+  background: linear-gradient(135deg, #ea580c 0%, #facc15 100%);
+}
+
+@utility bg-eco-gradient {
+  background: linear-gradient(135deg, #ea580c 0%, #ef4444 100%);
+}
+
+/* French Flag Accent Bar */
+@utility french-bar {
+  background: linear-gradient(90deg, #002395 33%, #FFFFFF 33%, #FFFFFF 66%, #ED2939 66%);
+}
+
+/* Base styles */
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-900;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Selection color */
+  ::selection {
+    @apply bg-blue-600 text-white;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 102, 255, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 102, 255, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+/* Spintax Highlight */
+.spintax-highlight {
+  @apply font-bold;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EcoCharge - Technical Configuration</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="flex min-h-screen w-full">
+<!-- Left Side: Form Section (60% on desktop) -->
+<div class="flex flex-col w-full lg:w-[60%] relative z-10 bg-white dark:bg-[#101922] transition-colors duration-300">
+<!-- Header / Nav Area -->
+<div class="flex items-center justify-between px-6 py-5 md:px-12 lg:px-16 border-b border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight">EcoCharge</span>
+</div>
+</div>
+<!-- Main Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<div class="px-6 py-8 md:px-12 lg:px-16 max-w-3xl mx-auto flex flex-col gap-8">
+<!-- Back Button & Progress -->
+<div class="flex flex-col gap-6">
+<div>
+<button class="group flex items-center gap-2 text-sm font-semibold text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span>Back to Step 1</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<p class="text-slate-900 dark:text-white text-sm font-semibold">Step 2 of 3: Technical Configuration</p>
+<span class="text-primary text-sm font-bold">66%</span>
+</div>
+<div class="h-2 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 66%;"></div>
+</div>
+</div>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col gap-3">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight">Technical Details</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Tell us a bit more about your installation site so we can provide an accurate estimate.</p>
+</div>
+<!-- Form Content -->
+<form class="flex flex-col gap-8" onsubmit="event.preventDefault();">
+<!-- Question 1: Location (Segmented Buttons) -->
+<div class="flex flex-col gap-3">
+<label class="text-slate-900 dark:text-white font-semibold text-base">Where is your parking spot located?</label>
+<div class="grid grid-cols-2 gap-2 p-1 bg-slate-100 dark:bg-slate-800 rounded-xl">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="location" type="radio" value="indoor"/>
+<div class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg text-slate-500 dark:text-slate-400 font-medium transition-all peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:text-primary peer-checked:shadow-sm">
+<span class="material-symbols-outlined">garage_home</span>
+<span>Indoor Parking</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="location" type="radio" value="outdoor"/>
+<div class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg text-slate-500 dark:text-slate-400 font-medium transition-all peer-checked:bg-white dark:peer-checked:bg-slate-700 peer-checked:text-primary peer-checked:shadow-sm">
+<span class="material-symbols-outlined">deck</span>
+<span>Outdoor Parking</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Question 2: Distance (Dropdown) -->
+<div class="flex flex-col gap-3">
+<label class="text-slate-900 dark:text-white font-semibold text-base" for="distance">Distance to electrical panel</label>
+<div class="relative">
+<select class="w-full appearance-none rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 py-4 pl-4 pr-12 text-slate-900 dark:text-white focus:border-primary focus:ring-1 focus:ring-primary transition-shadow cursor-pointer" id="distance">
+<option disabled="" selected="" value="">Select approximate distance...</option>
+<option value="short">Less than 10 meters</option>
+<option value="medium">10 - 30 meters</option>
+<option value="long">More than 30 meters</option>
+<option value="unknown">I don't know</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Question 3: Urgency (Radio Stack) -->
+<div class="flex flex-col gap-3">
+<label class="text-slate-900 dark:text-white font-semibold text-base">When do you want the installation?</label>
+<div class="flex flex-col gap-3">
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="urgency" type="radio" value="asap"/>
+<div class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary/50 dark:hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 peer-checked:ring-1 peer-checked:ring-primary transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary group-hover:text-primary transition-colors">bolt</span>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Immediately</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">I'm ready to proceed now</span>
+</div>
+</div>
+<div class="size-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="urgency" type="radio" value="month"/>
+<div class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary/50 dark:hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 peer-checked:ring-1 peer-checked:ring-primary transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary group-hover:text-primary transition-colors">calendar_month</span>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Within 1 month</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">Planning ahead</span>
+</div>
+</div>
+<div class="size-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+<label class="cursor-pointer group">
+<input class="peer sr-only" name="urgency" type="radio" value="future"/>
+<div class="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary/50 dark:hover:border-primary/50 peer-checked:border-primary peer-checked:bg-primary/5 dark:peer-checked:bg-primary/10 peer-checked:ring-1 peer-checked:ring-primary transition-all">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-400 peer-checked:text-primary group-hover:text-primary transition-colors">explore</span>
+<div class="flex flex-col">
+<span class="text-slate-900 dark:text-white font-medium">Research Phase</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm">Just checking prices</span>
+</div>
+</div>
+<div class="size-5 rounded-full border border-slate-300 dark:border-slate-600 flex items-center justify-center peer-checked:border-primary peer-checked:bg-primary transition-colors">
+<div class="size-2 rounded-full bg-white opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</label>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="pt-4 flex flex-col gap-4">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl transition-colors flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20" type="submit">
+<span>Next: Contact Info</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-xs text-slate-400 flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+                                Free quote, no obligation. Your data is secure.
+                            </p>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Right Side: Visual Panel (40% on desktop, hidden on mobile) -->
+<div class="hidden lg:flex lg:w-[40%] relative bg-slate-900 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Electric car charging" class="h-full w-full object-cover opacity-80" data-alt="Modern electric vehicle charging in a clean, well-lit garage environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLkQcEYPsKL_Fj2_BVCoTPpcHaKdaUrJS-nAu2HUAqmqVFRVD8Dzli7XfnP6O89wsilUbA5hM0OrCBfc4yglpq-5LCoSWKEo-IFSPrmLBdoSYysqM86tuD_oPWkSWFilAm3oNKuqwJ4IweDVY9FvzHGfO2JM4aWPaWIUw6ec3SGImwsuDAXHkJiV4QvvRd-rDJ5S1F7r8u0HXS4oC8FwH6jgzrnVhDPcRTesj9uHLusPuPfnNoZnc0OerdVjjG-lRmvfxFQSr7VFg"/>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#101922] via-[#101922]/40 to-transparent"></div>
+</div>
+<div class="relative z-10 mt-auto p-12 w-full">
+<div class="flex flex-col gap-4">
+<div class="size-12 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20 text-white mb-2">
+<span class="material-symbols-outlined">electric_car</span>
+</div>
+<blockquote class="text-white text-xl font-medium leading-relaxed">
+                        "Switching to home charging saved me over $1,200 in the first year alone. The installation process was seamless."
+                    </blockquote>
+<div class="flex items-center gap-3 mt-2">
+<div class="size-10 rounded-full bg-slate-700 overflow-hidden">
+<img alt="Customer" class="h-full w-full object-cover" data-alt="Portrait of a satisfied customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATZME6GP4IeyCmqBwGObA2aZquklGHDXkTanBe3eeqkUwsZ2ZFnB8uHDjiuzU6DxDFoR571ZACmrg6cmU4DtKVMkaQnzKAULWugSVP2Zxc_gCz9ckHKh1aGfIUPbEvK_bi0GtW-v2ZKdSHPcuG19Bn3U6Qe2EWHnwpHqnfOL0aW1w2sWjVX6GGEPt1acZP4G_RUGqYH4HpjeH9zdRRrNbUkPMebbOUNC-OUjvBGFoqvZaD5fjlkgk0lVEG7HqhIvLD0AmrW_ob1gw"/>
+</div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm">Marc D.</span>
+<span class="text-slate-400 text-xs">Verified Customer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

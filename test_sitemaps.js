@@ -1,0 +1,1 @@
+const { SITES } = require('./.next/server/app/[domain]/sitemap.js') || require('./src/lib/sites-config.ts'); // Needs ts-node or similar. Let's just create a quick next.js script or use fetch against the dev server.
