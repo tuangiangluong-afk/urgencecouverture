@@ -180,7 +180,7 @@ export async function POST(request: Request) {
 
             await resend.emails.send({
                 from: 'Urgence Couverture <contact@urgencecouverture.com>',
-                to: ['hello@urgencecouverture.com'],
+                to: ['bonjour@urgencecouverture.com'],
                 subject,
                 html
             });
