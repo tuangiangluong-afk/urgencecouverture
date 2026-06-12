@@ -9,7 +9,7 @@
       "accountId": "123456",
       "containerId": "789012",
       "name": "Leads Tracking Container",
-      "publicId": "GTM-XXXXXX",
+      "publicId": "GTM-WFKLMZMF",
       "usageContext": [
         "WEB"
       ]
@@ -480,7 +480,7 @@
           {
             "type": "TEMPLATE",
             "key": "value",
-            "value": "G-SBRK53310F"
+            "value": "G-TTWFC7DK28"
           }
         ]
       }
