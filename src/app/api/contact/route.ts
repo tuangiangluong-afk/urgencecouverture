@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         // If API Key is not set, we just log it (Simulated Mode)
         if (!process.env.RESEND_API_KEY) {
             console.log("⚠️ SIMULATION RESEND (No API Key found)");
-            console.log("To: hello@urgencecouverture.com");
+            console.log("To: bonjour@urgencecouverture.com");
             console.log(`Subject: [${postalCode || city}] Nouveau message de ${name}`);
             console.log("Body:", message);
 
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
 
         const data = await resend.emails.send({
             from: 'Urgence Couverture <contact@urgencecouverture.com>',
-            to: ['hello@urgencecouverture.com'],
+            to: ['bonjour@urgencecouverture.com'],
             replyTo: email,
             subject: `[${postalCode || city}] Contact: ${subject} - ${name}`,
             html: `
