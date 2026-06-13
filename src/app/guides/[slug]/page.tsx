@@ -162,9 +162,33 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         });
     }
 
+    
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": guide.title,
+        "description": guide.description,
+        "image": guide.image ? [`https://urgencecouverture.com${guide.image}`] : [`https://urgencecouverture.com/images/og-image.png`],
+        "datePublished": guide.date,
+        "author": [{
+            "@type": "Organization",
+            "name": "Urgence Couverture",
+            "url": "https://urgencecouverture.com"
+        }],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Urgence Couverture",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://urgencecouverture.com/logo.png"
+            }
+        }
+    };
+
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             {/* Nav */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <Header isHub={true} variant="default" themeColor="orange" />
 
             <main className="container mx-auto px-4 py-12 pt-40">

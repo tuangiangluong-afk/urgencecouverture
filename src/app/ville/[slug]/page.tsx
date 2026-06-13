@@ -40,6 +40,9 @@ export async function generateMetadata({
     return {
         title: pseo.meta_title,
         description: pseo.meta_description,
+        alternates: {
+            canonical: `https://urgencecouverture.com/ville/${resolvedParams.slug}`,
+        },
         openGraph: {
             title: pseo.meta_title,
             description: pseo.meta_description,

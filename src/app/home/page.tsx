@@ -20,7 +20,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 export const metadata: Metadata = {
     title: "Artisan Couvreur RGE | Urgence Fuite & Réparation Toiture",
     description: "Trouvez un couvreur de confiance près de chez vous. Recherche de fuite d'eau, réparation, nettoyage, démoussage et réfection de toiture. Devis gratuit sous 24h.",
-    keywords: ["artisan couvreur", "urgence couvreur", "reparation toiture", "recherche fuite toiture", "devis couverture toit", "nettoyage toiture"],
+    keywords: ["artisan couvreur", "urgence couvreur", "reparation toiture", "recherche fuite toiture", "devis couverture toit", "nettoyage toiture", "couvreur urgence près de chez moi", "fuite toiture qui appeler", "réparation toiture prix m2", "devis couvreur gratuit", "remplacement tuiles cassées", "étanchéité toiture terrasse", "démoussage toiture prix", "artisan couvreur RGE", "isolation toiture par l'extérieur prix", "fuite toiture assurance"],
 };
 
 export default function HomePage() {

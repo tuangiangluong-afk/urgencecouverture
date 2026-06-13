@@ -8,6 +8,11 @@ export default function StructuredData() {
         "url": "https://urgencecouverture.com",
         "logo": "https://urgencecouverture.com/logo.png",
         "description": "Réseau national de couvreurs et artisans charpentiers pour le dépannage de fuites, la réparation et la réfection de toiture. Artisans qualifiés RGE.",
+        "sameAs": [
+            "https://www.facebook.com/urgencecouverture",
+            "https://www.instagram.com/urgencecouverture"
+        ],
+        "foundingDate": "2020",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "FR"

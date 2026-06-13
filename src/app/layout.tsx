@@ -10,6 +10,7 @@ const inter = Inter({
 import { getCurrentYearSEO } from "@/lib/date";
 import StructuredData from "@/components/seo/StructuredData";
 import AttributionTracker from "@/components/AttributionTracker";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: {
@@ -96,6 +97,7 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased bg-neutral-900 text-neutral-50`}
       >
         <StructuredData />
+        <GoogleAnalytics GA_MEASUREMENT_ID="G-TTWFC7DK28" />
         <AttributionTracker />
         {/* Google Tag Manager (noscript) */}
         <noscript>

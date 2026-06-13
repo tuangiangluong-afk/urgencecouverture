@@ -1,0 +1,17 @@
+{
+  "name": "Urgence Couverture",
+  "short_name": "Urgence Couverture",
+  "description": "Trouvez un professionnel qualifié pour vos travaux avec Urgence Couverture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
