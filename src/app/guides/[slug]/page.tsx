@@ -30,14 +30,14 @@ const components = {
     ),
     // Le bouton magique à mettre au milieu de l'article
     CTAButton: ({ href, url, text }: { href?: string, url?: string, text: string }) => (
-        <div className="my-8 text-center">
+        <div className="my-8 text-center not-prose">
             <a href={href || url || '#'} className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1">
                 {text} <ArrowRight size={20} />
             </a>
         </div>
     ),
     CtaButton: ({ href, url, text }: { href?: string, url?: string, text: string }) => (
-        <div className="my-8 text-center">
+        <div className="my-8 text-center not-prose">
             <a href={href || url || '#'} className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1">
                 {text} <ArrowRight size={20} />
             </a>

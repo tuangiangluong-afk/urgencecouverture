@@ -195,7 +195,7 @@ export default function HomePage() {
                                     </div>
                                     <div className="flex items-center gap-3 mb-6">
                                         <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                                            <Zap className="text-orange-600" size={24} />
+                                            <ShieldCheck className="text-orange-600" size={24} />
                                         </div>
                                         <div>
                                             <h3 className="font-bold text-lg text-green-900">Toiture Rénovée</h3>

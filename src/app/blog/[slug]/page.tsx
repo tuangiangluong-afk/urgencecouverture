@@ -253,7 +253,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                          {/* CTA */}
                          <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white rounded-2xl p-8 text-center shadow-lg">
                             <h4 className="text-xl font-bold mb-2">Devis Gratuit</h4>
-                            <p className="text-blue-100 text-sm mb-6">Comparez les prix des installateurs IRVE près de chez vous.</p>
+                            <p className="text-blue-100 text-sm mb-6">Comparez les prix des couvreurs professionnels près de chez vous.</p>
                             <Link href="/devis" className="inline-block bg-white text-blue-900 px-6 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors w-full">
                                 Commencer
                             </Link>

@@ -80,7 +80,7 @@ export default function CallModal({
                             <Phone size={32} className="text-white fill-current" />
                         </div>
                         <h3 className="text-2xl font-bold text-white">
-                            Expert IRVE {cityName}
+                            Expert Couverture {cityName}
                         </h3>
                         <p className="text-white/90 font-medium">
                             Installation & Devis gratuit
@@ -110,7 +110,7 @@ export default function CallModal({
                             </div>
                             <div>
                                 <p className="text-sm font-semibold text-neutral-900">Installateurs Certifiés</p>
-                                <p className="text-xs text-neutral-500">Service certifié IRVE & Qualifelec</p>
+                                <p className="text-xs text-neutral-500">Artisans couvreurs certifiés Qualibat</p>
                             </div>
                         </div>
 
