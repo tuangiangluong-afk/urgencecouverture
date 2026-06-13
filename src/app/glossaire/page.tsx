@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Footer } from "@/components/Footer";
+import { getSiteConfig } from "@/lib/sites-config";
 
 export const metadata = {
     title: "Glossaire technique et définitions | urgencecouverture",
@@ -34,7 +35,7 @@ export default function GlossairePage() {
                     </div>
                 </div>
             </main>
-            <Footer />
+            <Footer config={getSiteConfig('home')!} />
         </div>
     );
 }

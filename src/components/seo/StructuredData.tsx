@@ -23,8 +23,7 @@ export default function StructuredData() {
             "contactType": "customer service",
             "areaServed": "FR",
             "availableLanguage": "French"
-        }
-    
+        },
         "potentialAction": {
             "@type": "SearchAction",
             "target": "https://urgencecouverture.com/ville/{search_term_string}",
