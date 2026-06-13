@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import { ArrowLeft, Clock, Calendar, Zap, ArrowRight } from 'lucide-react';
 import SimulatorWidget from '@/components/blog/SimulatorWidget';
-import LocalLinker from '@/components/blog/LocalLinker';
+import LocalLinkerComponent from '@/components/blog/LocalLinker';
 import { createClient } from "@supabase/supabase-js";
 import { marked } from 'marked';
 
@@ -29,9 +29,16 @@ const components = {
         </div>
     ),
     // Le bouton magique à mettre au milieu de l'article
-    CtaButton: ({ text, url }: { text: string, url: string }) => (
+    CTAButton: ({ href, url, text }: { href?: string, url?: string, text: string }) => (
         <div className="my-8 text-center">
-            <a href={url} className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1">
+            <a href={href || url || '#'} className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1">
+                {text} <ArrowRight size={20} />
+            </a>
+        </div>
+    ),
+    CtaButton: ({ href, url, text }: { href?: string, url?: string, text: string }) => (
+        <div className="my-8 text-center">
+            <a href={href || url || '#'} className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-orange-500/30 transition-all transform hover:-translate-y-1">
                 {text} <ArrowRight size={20} />
             </a>
         </div>
@@ -39,7 +46,7 @@ const components = {
     // Widget de maillage local (pour le mettre au milieu du texte)
     LocalLinker: () => (
         <div className="my-8 not-prose">
-            <LocalLinker />
+            <LocalLinkerComponent />
         </div>
     )
 };
@@ -280,7 +287,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                             <SimulatorWidget />
 
                             {/* NOUVEAU : Local Linker (Le Maillage) */}
-                            <LocalLinker />
+                            <LocalLinkerComponent />
 
                             {/* Dynamic Table of Contents */}
                             {toc.length > 0 && (

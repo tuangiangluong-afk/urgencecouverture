@@ -82,5 +82,9 @@
         }
       }
     }
+  },
+  "externalDocs": {
+    "description": "Full documentation, guides, and installer network details",
+    "url": "https://urgencecouverture.com/guides"
   }
 }

@@ -20,5 +20,6 @@ Urgence Couverture est la plateforme de référence en France pour trouver des a
 - Service: Simulation de devis et estimation d'aides (MaPrimeRénov', MaPrimeAdapt', CEE, etc.)
 
 ## Links
+- Sitemap: https://urgencecouverture.com/sitemap.xml
 - Guide et Conseils: https://urgencecouverture.com/guides
 - Simulation: https://urgencecouverture.com/#simulateur
