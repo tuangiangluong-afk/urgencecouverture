@@ -1,0 +1,24 @@
+# Urgence Couverture
+
+> Réseau national de couvreurs et artisans charpentiers pour le dépannage de fuites, la réparation et la réfection de toiture.
+
+## About
+Urgence Couverture est la plateforme de référence en France pour trouver des artisans locaux qualifiés (RGE, Handibat, QualiPAC, QualiPV, etc.) selon les besoins. Nous offrons des simulations de devis gratuits et un accompagnement sur les aides de l'État.
+
+## Key Products/Services
+- **Dépannage Urgence Toiture**: Intervention rapide pour fuites et bâchage.
+- **Réfection de Toiture**: Remplacement de couverture, isolation (Sarking), démoussage.
+
+## Key Facts
+- Founded: 2020
+- Industry: Couverture, Bâtiment
+- Headquarters: France
+- Coverage: National (Toutes régions et départements de France métropolitaine)
+
+## Contact
+- Website: https://urgencecouverture.com
+- Service: Simulation de devis et estimation d'aides (MaPrimeRénov', MaPrimeAdapt', CEE, etc.)
+
+## Links
+- Guide et Conseils: https://urgencecouverture.com/guides
+- Simulation: https://urgencecouverture.com/#simulateur

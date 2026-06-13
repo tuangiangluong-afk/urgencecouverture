@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Urgence Couverture AI Agent API",
+    "description": "API for interacting with Urgence Couverture services, understanding product offerings, and generating leads.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://urgencecouverture.com"
+    }
+  ],
+  "paths": {
+    "/api/leads/public": {
+      "post": {
+        "summary": "Submit a new lead for a project estimate",
+        "operationId": "submitLead",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "firstName": {
+                    "type": "string"
+                  },
+                  "lastName": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "phone": {
+                    "type": "string"
+                  },
+                  "postalCode": {
+                    "type": "string"
+                  },
+                  "projectDetails": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "firstName",
+                  "lastName",
+                  "email",
+                  "phone",
+                  "postalCode"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Lead submitted successfully"
+          }
+        }
+      }
+    },
+    "/ville/{slug}": {
+      "get": {
+        "summary": "Get local service information and FAQ for a specific city",
+        "operationId": "getCityInfo",
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Slugified city name (e.g., 'paris', 'lyon')"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "HTML page containing local schema, FAQ, and local artisan details."
+          }
+        }
+      }
+    }
+  }
+}
