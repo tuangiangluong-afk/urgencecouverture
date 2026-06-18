@@ -136,9 +136,9 @@ export default async function middleware(req: NextRequest) {
     // Shared routes must point back to the main hub as their canonical source
     // Local /ville and /quartier pages MUST be canonical to THEMSELVES on their own domain
     if (cleanPath.startsWith("/guides") || cleanPath.startsWith("/vehicules") || cleanPath.startsWith("/solutions") || cleanPath.startsWith("/service") || cleanPath.startsWith("/poi") || cleanPath.startsWith("/outils") || cleanPath.startsWith("/installation") || cleanPath.startsWith("/fiscalite-entreprise-borne")) {
-        response.headers.set("x-irve-canonical-domain", "urgencecouverture.com");
+        response.headers.set("x-irve-canonical-domain", "www.urgencecouverture.com");
     } else {
-        response.headers.set("x-irve-canonical-domain", domainKey);
+        response.headers.set("x-irve-canonical-domain", "www." + domainKey);
     }
 
     // Vercel CDN Caching: Cache all public HTML and sitemap routes to save Fluid CPU hours

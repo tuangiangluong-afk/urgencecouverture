@@ -175,19 +175,19 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         "@type": "Article",
         "headline": guide.title,
         "description": guide.description,
-        "image": guide.image ? [`https://urgencecouverture.com${guide.image}`] : [`https://urgencecouverture.com/images/og-image.png`],
+        "image": guide.image ? [`https://www.urgencecouverture.com${guide.image}`] : [`https://www.urgencecouverture.com/images/og-image.png`],
         "datePublished": guide.date,
         "author": [{
             "@type": "Organization",
             "name": "Urgence Couverture",
-            "url": "https://urgencecouverture.com"
+            "url": "https://www.urgencecouverture.com"
         }],
         "publisher": {
             "@type": "Organization",
             "name": "Urgence Couverture",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://urgencecouverture.com/logo.png"
+                "url": "https://www.urgencecouverture.com/logo.png"
             }
         }
     };

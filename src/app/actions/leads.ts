@@ -133,7 +133,7 @@ export async function assignLeadToPartners(leadId: string, partnerIds: string[])
                             </div>
 
                             <p style="text-align: center; margin-top: 30px;">
-                                <a href="https://urgencecouverture.com/leads/unlock/${lead.id}" 
+                                <a href="https://www.urgencecouverture.com/leads/unlock/${lead.id}" 
                                    style="background-color: #ea580c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block;">
                                    DÉBLOQUER LES COORDONNÉES
                                 </a>

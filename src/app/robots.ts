@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/admin/', '/login', '/api/', '/demo/', '/_next/static/', '/favicon.ico'],
         },
-        sitemap: 'https://urgencecouverture.com/sitemap.xml',
+        sitemap: 'https://www.urgencecouverture.com/sitemap.xml',
     };
 }

@@ -5,7 +5,7 @@ import { slugify } from '@/lib/slugify';
 import { createClient } from '@supabase/supabase-js';
 
 // Base URL (Hub)
-const BASE_URL = 'https://urgencecouverture.com';
+const BASE_URL = 'https://www.urgencecouverture.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const guides = getAllGuides();

@@ -15,7 +15,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
-  const canonicalDomain = headersList.get("x-irve-canonical-domain") || "urgencecouverture.com";
+  const canonicalDomain = headersList.get("x-irve-canonical-domain") || "www.urgencecouverture.com";
   const path = headersList.get("x-irve-path") || "";
   const baseUrl = `https://${canonicalDomain}`;
 

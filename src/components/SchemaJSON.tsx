@@ -13,7 +13,7 @@ interface SchemaJSONProps {
 export default function SchemaJSON({ type, site, breadcrumbItems, faqSegment }: SchemaJSONProps) {
     let schema = {};
 
-    const baseUrl = "https://urgencecouverture.com";
+    const baseUrl = "https://www.urgencecouverture.com";
 
     if (type === "LocalBusiness" && site) {
         const canonicalUrl = site.slug === 'home' || site.slug === 'urgencecouverture.com' || site.slug === 'www.urgencecouverture.com'

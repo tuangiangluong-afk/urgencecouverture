@@ -4,7 +4,7 @@ import { slugify } from '@/lib/slugify';
 import { getAllGuides } from '@/lib/mdx';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://urgencecouverture.com';
+    const baseUrl = 'https://www.urgencecouverture.com';
 
     // 1. CORE STATIC PAGES
     const coreRoutes: MetadataRoute.Sitemap = [

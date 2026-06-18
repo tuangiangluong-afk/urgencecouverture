@@ -5,8 +5,8 @@ export default function StructuredData() {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Urgence Couverture",
-        "url": "https://urgencecouverture.com",
-        "logo": "https://urgencecouverture.com/logo.png",
+        "url": "https://www.urgencecouverture.com",
+        "logo": "https://www.urgencecouverture.com/logo.png",
         "description": "Réseau national de couvreurs et artisans charpentiers pour le dépannage de fuites, la réparation et la réfection de toiture. Artisans qualifiés RGE.",
         "sameAs": [
             "https://www.facebook.com/urgencecouverture",
@@ -26,7 +26,7 @@ export default function StructuredData() {
         },
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://urgencecouverture.com/ville/{search_term_string}",
+            "target": "https://www.urgencecouverture.com/ville/{search_term_string}",
             "query-input": "required name=search_term_string"
         }
     };
@@ -34,11 +34,11 @@ export default function StructuredData() {
     const websiteSchema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://urgencecouverture.com",
+        "url": "https://www.urgencecouverture.com",
         "name": "urgencecouverture",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://urgencecouverture.com/ville/{search_term_string}",
+            "target": "https://www.urgencecouverture.com/ville/{search_term_string}",
             "query-input": "required name=search_term_string"
         }
     };
