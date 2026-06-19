@@ -12,17 +12,17 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
     {
-        quote: "L'outil de comparaison m'a fait gagner des heures. J'ai reçu 3 devis en 24h et l'installation de ma Wallbox était parfaite. Les démarches de subventions ont été gérées par l'installateur.",
+        quote: "L'outil de comparaison m'a fait gagner des heures. J'ai reçu 3 devis en 24h et les travaux de rénovation de ma toiture se sont déroulés à merveille. Devis clair et entreprise très réactive.",
         name: "Marc Dubreuil",
         location: "Lyon",
-        product: "Tesla Wall Connector",
+        product: "Rénovation de toiture",
         initials: "MD",
     },
     {
-        quote: "Très recommandé ! L'installateur était très professionnel et m'a tout expliqué sur l'application de charge. Prix très transparent.",
+        quote: "Intervention d'urgence dans la nuit pour une fuite de toiture. Le couvreur partenaire a été d'une réactivité incroyable et a colmaté la fuite très proprement. Devis très transparent et honnête.",
         name: "Valérie Lemaire",
         location: "Bordeaux",
-        product: "Schneider EVlink",
+        product: "Recherche de fuite & Réparation",
         initials: "VL",
     },
 ];
