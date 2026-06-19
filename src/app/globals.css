@@ -47,7 +47,7 @@
   @apply bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-orange-400;
 }
 
-@utility bg-irve-gradient {
+@utility bg-brand-gradient {
   background: linear-gradient(135deg, #ea580c 0%, #facc15 100%);
 }
 

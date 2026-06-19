@@ -9,10 +9,10 @@
             "has": [
                 {
                     "type": "host",
-                    "value": "www.expertbornerecharge.com"
+                    "value": "www.urgencecouverture.com"
                 }
             ],
-            "destination": "https://expertbornerecharge.com/:path",
+            "destination": "https://urgencecouverture.com/:path",
             "statusCode": 301
         }
     ],

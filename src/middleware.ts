@@ -34,12 +34,7 @@ export default async function middleware(req: NextRequest) {
         return res;
     };
 
-    // 0. EXPLICIT DEAD ROUTES (GSC Cleanup)
-    if (cleanPath.startsWith("/gare")) {
-        return applySecurityHeaders(new NextResponse(null, { status: 410, statusText: "Gone" }));
-    }
-
-    // 0.1 Path Normalization (Lowercase & No Trailing Slash handled by next.config `trailingSlash: false`)
+        // 0.1 Path Normalization (Lowercase & No Trailing Slash handled by next.config `trailingSlash: false`)
     if (cleanPath !== cleanPath.toLowerCase()) {
         const lowercaseUrl = new URL(url.origin + url.pathname.toLowerCase() + url.search);
         if (lowercaseUrl.href !== url.href) {
@@ -100,7 +95,7 @@ export default async function middleware(req: NextRequest) {
             }
         }
 
-        if (path.startsWith("/admin") || path.startsWith("/login") || path.startsWith("/api") || path.startsWith("/leads") || path.startsWith("/guides") || path.startsWith("/outils") || path.startsWith("/vehicules") || path.startsWith("/ville") || path.startsWith("/solutions") || path.startsWith("/service") || path.startsWith("/quartier") || path.startsWith("/departement") || path.startsWith("/poi") || path.startsWith("/demo") || path.startsWith("/installation") || path.startsWith("/images") || path.startsWith("/fiscalite-entreprise-borne")) {
+        if (path.startsWith("/admin") || path.startsWith("/login") || path.startsWith("/api") || path.startsWith("/leads") || path.startsWith("/guides") || path.startsWith("/outils") || path.startsWith("/vehicules") || path.startsWith("/ville") || path.startsWith("/solutions") || path.startsWith("/service") || path.startsWith("/quartier") || path.startsWith("/departement") || path.startsWith("/poi") || path.startsWith("/demo") || path.startsWith("/installation") || path.startsWith("/images")) {
             response = NextResponse.next();
         } else {
             response = NextResponse.rewrite(
@@ -118,7 +113,7 @@ export default async function middleware(req: NextRequest) {
         }
 
         // Whitelist shared routes (serve from root app)
-        if (path.startsWith("/guides") || path.startsWith("/leads") || path.startsWith("/vehicules") || path.startsWith("/solutions") || path.startsWith("/ville") || path.startsWith("/service") || path.startsWith("/quartier") || path.startsWith("/departement") || path.startsWith("/poi") || path.startsWith("/api") || path.startsWith("/outils") || path.startsWith("/login") || path.startsWith("/admin") || path.startsWith("/installation") || path.startsWith("/fiscalite-entreprise-borne")) {
+        if (path.startsWith("/guides") || path.startsWith("/leads") || path.startsWith("/vehicules") || path.startsWith("/solutions") || path.startsWith("/ville") || path.startsWith("/service") || path.startsWith("/quartier") || path.startsWith("/departement") || path.startsWith("/poi") || path.startsWith("/api") || path.startsWith("/outils") || path.startsWith("/login") || path.startsWith("/admin") || path.startsWith("/installation")) {
             response = NextResponse.next();
         } else {
             const routeParam = hostname.includes(".localhost") ? domainKey : domainKey;
@@ -135,7 +130,7 @@ export default async function middleware(req: NextRequest) {
 
     // Shared routes must point back to the main hub as their canonical source
     // Local /ville and /quartier pages MUST be canonical to THEMSELVES on their own domain
-    if (cleanPath.startsWith("/guides") || cleanPath.startsWith("/vehicules") || cleanPath.startsWith("/solutions") || cleanPath.startsWith("/service") || cleanPath.startsWith("/poi") || cleanPath.startsWith("/outils") || cleanPath.startsWith("/installation") || cleanPath.startsWith("/fiscalite-entreprise-borne")) {
+    if (cleanPath.startsWith("/guides") || cleanPath.startsWith("/vehicules") || cleanPath.startsWith("/solutions") || cleanPath.startsWith("/service") || cleanPath.startsWith("/poi") || cleanPath.startsWith("/outils") || cleanPath.startsWith("/installation")) {
         response.headers.set("x-irve-canonical-domain", "www.urgencecouverture.com");
     } else {
         response.headers.set("x-irve-canonical-domain", "www." + domainKey);
