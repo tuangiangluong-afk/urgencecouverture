@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 import Link from "next/link";
 import Logo from "@/components/Logo";
@@ -20,6 +22,37 @@ export default function Header({
     variant = "default",
     themeColor = 'orange'
 }: HeaderProps) {
+    const [isOpen, setIsOpen] = useState(false);
+    const showMobileMenu = isHub && !city;
+
+    const hoverColors: Record<string, string> = {
+        blue: "hover:text-blue-500",
+        emerald: "hover:text-emerald-500",
+        amber: "hover:text-amber-500",
+        purple: "hover:text-purple-500",
+        rose: "hover:text-rose-500",
+        teal: "hover:text-teal-500",
+        indigo: "hover:text-indigo-500",
+        orange: "hover:text-orange-500",
+        gold: "hover:text-amber-500"
+    };
+    const hoverClass = hoverColors[themeColor] || "hover:text-blue-500";
+
+    const navLinks = [
+        {
+                "href": "/guides/urgence-fuite-toiture-que-faire",
+                "text": "Urgence Fuite"
+        },
+        {
+                "href": "/guides/prix-refection-toiture-m2",
+                "text": "Tarifs au m²"
+        },
+        {
+                "href": "/guides",
+                "text": "Guides"
+        }
+];
+
     const pathname = usePathname();
 
     const demoMatch = pathname?.match(/^(\/demo\/[^\/]+)/);
@@ -65,9 +98,9 @@ export default function Header({
                     {/* Desktop Navigation (Hub Only) */}
                     {isHub && (
                         <div className={`hidden md:flex items-center gap-6 text-sm font-medium ${variant === "light" ? "text-slate-300" : "text-slate-600"}`}>
-                            <Link href="/guides/urgence-fuite-toiture-que-faire" className="hover:text-orange-500 transition">Urgence Fuite</Link>
-                            <Link href="/guides/prix-refection-toiture-m2" className="hover:text-orange-500 transition">Tarifs au m²</Link>
-                            <Link href="/guides" className="hover:text-orange-500 transition">Guides</Link>
+                            {navLinks.map((link, idx) => (
+                                <Link key={idx} href={link.href} className={`${hoverClass} transition`}>{link.text}</Link>
+                            ))}
                         </div>
                     )}
 
@@ -85,8 +118,44 @@ export default function Header({
                         <Zap size={16} fill="currentColor" />
                         <span>Devis Gratuit</span>
                     </Link>
+                
+                    {showMobileMenu && (
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className={`md:hidden p-2 rounded-lg focus:outline-none ${
+                                variant === "light" 
+                                    ? "text-slate-300 hover:text-white" 
+                                    : "text-slate-600 hover:text-slate-900"
+                            }`}
+                            aria-label="Toggle menu"
+                        >
+                            {isOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    )}
                 </div>
             </div>
+
+            {/* Mobile Menu Dropdown */}
+            {showMobileMenu && isOpen && (
+                <div className={`md:hidden border-t ${
+                    variant === 'light' 
+                        ? 'bg-neutral-900/95 border-white/10 text-white' 
+                        : 'bg-white/95 border-slate-200 text-slate-900'
+                } px-4 py-4 space-y-3`}>
+                    {navLinks.map((link, idx) => (
+                        <Link
+                            key={idx}
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`block py-2 text-base font-semibold transition ${hoverClass} ${
+                                variant === "light" ? "text-slate-200" : "text-slate-700"
+                            }`}
+                        >
+                            {link.text}
+                        </Link>
+                    ))}
+                </div>
+            )}
         </nav>
     );
 }
