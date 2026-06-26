@@ -3,19 +3,6 @@
     "framework": "nextjs",
     "cleanUrls": true,
     "trailingSlash": false,
-    "redirects": [
-        {
-            "source": "/:path((?!api/).*)",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "www.urgencecouverture.com"
-                }
-            ],
-            "destination": "https://urgencecouverture.com/:path",
-            "statusCode": 301
-        }
-    ],
     "crons": [
         {
             "path": "/api/indexnow",
