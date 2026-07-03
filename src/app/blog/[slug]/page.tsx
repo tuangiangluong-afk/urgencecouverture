@@ -26,6 +26,7 @@ interface BlogPost {
     content: string;
     featured_image_url: string | null;
     author_name?: string;
+    author_slug?: string;
     published_at: string;
     updated_at: string;
     category?: { name: string; slug: string };
@@ -64,6 +65,7 @@ async function getPost(slug: string): Promise<BlogPost | null> {
         post.author_name = data.author.name;
         post.author_image = data.author.image_url;
         post.author_role = data.author.role;
+        post.author_slug = data.author.slug;
     }
     return post;
 }
@@ -235,7 +237,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                                     </div>
                                 </div>
                                 <div>
-                                    <p className="font-bold text-neutral-900">{post.author_name || 'Urgence Couverture'}</p>
+                                    <Link href={post.author_slug ? `/author/${post.author_slug}` : "#"} className="font-bold text-neutral-900 hover:text-amber-600 transition-colors">post.author_name || 'Urgence Couverture'</Link>
                                     <p className="text-xs text-neutral-500">Couvreur Qualifié</p>
                                 </div>
                             </div>

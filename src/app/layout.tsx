@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { headers } from "next/headers";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
@@ -102,6 +103,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased bg-neutral-900 text-neutral-50`}
       >
+        {/* AnswerShaper Local Tag */}
+        <Script src="https://answershaper.com/api/v1/m2m/local-tag/16.js" strategy="lazyOnload" defer />
+
         <StructuredData />
         <GoogleAnalytics GA_MEASUREMENT_ID="G-TTWFC7DK28" />
         <AttributionTracker />
