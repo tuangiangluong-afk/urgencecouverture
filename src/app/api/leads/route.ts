@@ -53,7 +53,7 @@ export async function POST(request: Request) {
 
         // Forward to ViteUnDevis if it is a secondary lead
         let vudResult = null;
-        if (arbitrageStatus === 'vite_un_devis') {
+        if (true) { // Always route to ViteUnDevis
             console.log("📡 [ViteUnDevis] Forwarding lead to ViteUnDevis API...");
             
             let catId = '143'; // Toiture
