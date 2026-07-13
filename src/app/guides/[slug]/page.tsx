@@ -189,13 +189,35 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
                 "@type": "ImageObject",
                 "url": "https://www.urgencecouverture.com/logo.png"
             }
+        },
+        "dateModified": guide.date || guide.published_at,
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "article h2", "article p:first-of-type"]
         }
     };
+    // HowTo Schema for AEO (auto-generated from article headings)
+    const howToSchema = toc.length >= 3 ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": guide.meta?.title || guide.title,
+        "description": guide.meta?.description || guide.description,
+        "step": toc.filter((h: any) => h.level === 2).map((h: any, i: number) => ({
+            "@type": "HowToStep",
+            "position": i + 1,
+            "name": h.text,
+            "url": `https://www.urgencecouverture.com/guides/${resolvedParams.slug}#${h.id}`
+        }))
+    } : null;
+
 
     return (
         <div className="min-h-screen bg-white text-slate-900 font-sans">
             {/* Nav */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+            {howToSchema && (
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+            )}
             <Header isHub={true} variant="default" themeColor="orange" />
 
             <main className="container mx-auto px-4 py-12 pt-40">

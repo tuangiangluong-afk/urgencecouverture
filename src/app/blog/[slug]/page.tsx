@@ -126,6 +126,34 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         "author": {
             "@type": "Person",
             "name": post.author_name || "Urgence Couverture"
+        },
+        "publisher": {
+
+            "@type": "Organization",
+
+            "name": "Urgence Couverture",
+
+            "logo": {
+
+                "@type": "ImageObject",
+
+                "url": "https://www.urgencecouverture.com/logo.png"
+
+            }
+
+        },
+
+        "mainEntityOfPage": {
+
+            "@type": "WebPage",
+
+            "@id": "https://www.urgencecouverture.com/blog/"
+
+        },
+
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["h1", "article h2", "article p:first-of-type", ".prose > p:first-child"]
         }
     };
 
