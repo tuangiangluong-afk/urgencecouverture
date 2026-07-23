@@ -46,6 +46,7 @@ interface FormData {
     email: string;
     phone: string;
     zipCode: string;
+    phoneConsent?: boolean;
 }
 
 const FRENCH_PHONE_REGEX = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
@@ -67,7 +68,8 @@ export default function LeadForm({
         name: "",
         email: "",
         phone: "",
-        zipCode: ""
+        zipCode: "",
+        phoneConsent: false
     };
 
     const [step, setStep] = useState(initialProjectType ? 2 : 1);
@@ -126,7 +128,7 @@ export default function LeadForm({
                     formData.email.includes("@") &&
                     ZIP_CODE_REGEX.test(formData.zipCode.trim()) &&
                     formData.phone.trim() !== "" &&
-                    FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, ''))
+                    FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, '') && formData.phoneConsent === true)
                 );
             default: return false;
         }
@@ -152,7 +154,7 @@ export default function LeadForm({
             if (formData.name.trim() === "") errors.push("votre Nom");
             if (!ZIP_CODE_REGEX.test(formData.zipCode.trim())) errors.push("un Code Postal valide");
             if (!formData.email.includes("@")) errors.push("un Email valide");
-            if (formData.phone.trim() === "" || !FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, ''))) errors.push("un Numéro de téléphone valide");
+            if (formData.phone.trim() === "" || !FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, '') && formData.phoneConsent === true)) errors.push("un Numéro de téléphone valide");
             
             setErrorMessage(`Veuillez renseigner : ${errors.join(', ')}.`);
             return;
@@ -177,6 +179,10 @@ export default function LeadForm({
                 leadScore: getLeadScore(),
                 niche: 'toiture',
                 timestamp: new Date().toISOString(),
+                phoneConsent: formData.phoneConsent,
+                consentText: "J'accepte d'être contacté(e) par téléphone par ViteUnDevis.com et ses partenaires certifiés pour la qualification de ma demande de devis et la réalisation d'une étude technique.",
+                consentDate: new Date().toISOString(),
+                consentUrl: typeof window !== 'undefined' ? window.location.href : `https://${domain}`,
                 attribution
             };
 
@@ -523,7 +529,7 @@ export default function LeadForm({
                                     placeholder="06 12 34 56 78"
                                     className="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition outline-none"
                                 />
-                                {formData.phone && !FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, '')) && (
+                                {formData.phone && !FRENCH_PHONE_REGEX.test(formData.phone.replace(/\s/g, '') && formData.phoneConsent === true) && (
                                     <p className="text-xs text-red-500 mt-1">
                                         Format de téléphone invalide (Ex: 0612345678)
                                     </p>

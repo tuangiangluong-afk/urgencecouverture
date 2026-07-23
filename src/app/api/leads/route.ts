@@ -23,6 +23,12 @@ function calculateScore(body: any): number {
 export async function POST(request: Request) {
     try {
         const body = await request.json();
+        const clientIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || request.headers.get("x-real-ip") || "127.0.0.1";
+        const refererUrl = request.headers.get("referer") || "";
+        const consentText = body.consentText || "J'accepte d'être contacté(e) par téléphone par ViteUnDevis.com et ses partenaires certifiés pour la qualification de ma demande de devis et la réalisation d'une étude technique.";
+        const consentDate = body.consentDate || new Date().toISOString();
+        const consentIp = clientIp;
+        const consentUrl = body.consentUrl || refererUrl || "https://" + (body.domain || "urgencecouverture.com");
         console.log("📥 [API/LEADS/ROOFING] Received body:", body);
         const {
             name, email, phone, city, postalCode, domain,
@@ -82,7 +88,11 @@ export async function POST(request: Request) {
                 delais: timeline === 'urgent' ? 1 : timeline === '3_mois' ? 2 : 3,
                 description: `Projet de couverture/toiture. Type de travaux: ${projectType || 'N/A'}. Surface de toit: ${roofSurface || 'N/A'}. Statut d'habitation: ${ownerStatus || 'N/A'}. Delai: ${timeline || 'N/A'}.`,
                 cat_id: catId,
-                site_name: domain || 'urgencecouverture.com'
+                site_name: domain || 'urgencecouverture.com',
+                consent_text: consentText,
+                consent_date: consentDate,
+                consent_ip: consentIp,
+                consent_url: consentUrl
             };
             
             try {

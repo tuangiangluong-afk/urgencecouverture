@@ -17,6 +17,10 @@ export interface VUDLeadPayload {
   description: string;
   cat_id: string;
   site_name?: string;
+  consent_text?: string;
+  consent_date?: string;
+  consent_ip?: string;
+  consent_url?: string;
 }
 
 export interface VUDResponse {
@@ -89,7 +93,11 @@ export async function sendLeadToViteUnDevis(payload: VUDLeadPayload): Promise<VU
         description: payload.description,
         cat_id: payload.cat_id,
         format_return: 'json',
-        site_name: payload.site_name || 'urgencecouverture.com'
+        site_name: payload.site_name || 'urgencecouverture.com',
+        consent_text: payload.consent_text || "",
+        consent_date: payload.consent_date || "",
+        consent_ip: payload.consent_ip || "",
+        consent_url: payload.consent_url || ""
       })
     });
 
