@@ -1,12 +1,16 @@
 {
-    "$schema": "https://openapi.vercel.sh/vercel.json",
-    "framework": "nextjs",
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "crons": [
-        {
-            "path": "/api/indexnow",
-            "schedule": "0 0 * * *"
-        }
-    ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "crons": [
+    {
+      "path": "/api/indexnow",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/google-indexing",
+      "schedule": "0 2 * * *"
+    }
+  ]
 }
